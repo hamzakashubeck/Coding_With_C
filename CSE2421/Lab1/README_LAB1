@@ -1,0 +1,35 @@
+THIS IS THE README FILE FOR LAB 1.
+
+BY SUBMITTING THIS FILE TO CARMEN, I CERTIFY THAT I HAVE PERFORMED ALL OF THE WORK TO DETERMINE THE ANSWERS FOUND WITHIN THIS FILE MYSELF WITH NO ASSISTANCE FROM ANY PERSON OTHER THAN THE INSTRUCTOR OF THIS COURSE OR ONE OF OUR UNDERGRADUATE GRADERS.
+
+1. Name: Hamza Kashubeck
+
+2. UNIX is proprietary system (i.e. you must purchase a license) while Linux is an Open Source system. An Open Source system, however, is not always "free". Why?
+	An Open Source system itself may be free on paper, but additional support for it as well as important tools may not be free.
+
+3. Within gdb, the value of the variable i before the initialization is: 0
+
+4. Within gdb, the value of the variable i after the initialization is: 1
+
+5. What does touch do and why did it change the behavior of make? 
+	A given rule will rebuild all .o when you touch any .h file. By touching include.h, it tells make that it should rebuild and recompile by interacting with the file in a way that doesn't change its contents, but that adjusts its timestamp to indicate that it has to rebuild.
+
+6. In gdb, you walked through the code using next and using step - describe the differences in their behavior: 
+	Step walks through functions line by line, and Next treats functions as one line of code. Next is more useful when you don't need to traverse through an existing function's every line (the example given in the lab is the print function).
+
+7. In gdb, what did finish do? 
+	Finish completes the function it is currently debugging and then waits for user input on what to do next.
+
+8. On the final run, after you set the value of x to 200, what was the value of i back in the calling function? 
+	After issuing the finish command and printing i, its value shows as 1.
+
+9. What kind of recognizable things were found in the tags file? 
+	The file included recognizable keywords such as INIT, main, timesTwo (my method name) and the filenames include.h and lab1.c
+
+10.v How do the contents of the .vs file compare to your C code?
+	The .vs file contains the methods written in the C code file. According to the lab, it contains the exact text you would need for a header file.
+
+11. Give the line number and filename for where the zd executable crashed:
+	Line number: 24. Filename: zd.c
+
+12. What was the value of p in zd when zd crashed? 25
