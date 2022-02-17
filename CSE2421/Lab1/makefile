@@ -13,10 +13,15 @@ all:  tags headers lab1
 
 lab1: lab1.o 
 	gcc -g -o $@ $^ 
+	
+#zd.c file is not uploaded to github, because its contents are copyright Dr. Neil Kirby
+#entry to create an executable zd file:
+zd: zd.o
+	gcc -ansi -pedantic -Wimplicit-function-declaration -Wreturn-type -g -o zd zd.c
 
-#this is where you create an entry to build yuour zip file
+#this is where you create an entry to build your zip file
 #it will also update with new labs
-lab1.zip: makefile lab1.c README_LAB1 include.h zd.c
+lab1.zip: makefile lab1.c README_LAB1 include.h
 	zip $@ $^
 	# remove old install folder
 	rm -rf install
@@ -26,11 +31,6 @@ lab1.zip: makefile lab1.c README_LAB1 include.h zd.c
 	unzip lab1.zip -d install
 	# only make the lab1 targer, not lab1.zip
 	make -C install lab1
-
-
-#entry to create an executable zd file:
-zd: zd.o
-	gcc -ansi -pedantic -Wimplicit-function-declaration -Wreturn-type -g -o zd zd.c
 
 
 #"stuff" entry for lab1:
